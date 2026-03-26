@@ -1,0 +1,60 @@
+<html>
+<head>
+  <style>
+    .tooltip {
+      position: absolute;
+      background: #333;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      display: none;
+      z-index: 100;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    }
+    area:hover {
+      outline-color: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="фотка.jpg" usemap="#mymap" alt="Сенсорное изображение">
+
+  <map name="mymap">
+
+    <area shape="poly" coords="50,50,100,30,150,50,120,100"
+          onmouseover="showTip('Это первая область!', event)"
+          onmouseout="hideTip()">
+
+    <area shape="circle" coords="250,80,40"
+          onmouseover="showTip('Это вторая область!', event)"
+          onmouseout="hideTip()">
+
+
+    <area shape="rect" coords="350,40,450,120"
+          onmouseover="showTip('Это третья область!', event)"
+          onmouseout="hideTip()">
+  </map>
+
+
+  <div id="tooltip" class="tooltip">j</div>
+
+  <script>
+    function showTip(text, e) {
+      var tip = document.getElementById('tooltip');
+      tip.textContent = text;
+      tip.style.left = (e.pageX + 15) + 'px';
+      tip.style.top = (e.pageY + 15) + 'px';
+      tip.style.display = 'block';
+    }
+
+    function hideTip() {
+      document.getElementById('tooltip').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,62 @@
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+ 
+    }
+    .controls {
+      margin: 20px 0;
+    }
+    button {
+      font-size: 16px;
+    
+    }
+    img {
+      max-width: 100%;
+      transition: width 0.3s, height 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <h1>Изменение размера изображения</h1>
+
+
+  <div class="controls">
+    <button onclick="shrinkImage()">Уменьшить рисунок</button>
+    <button onclick="enlargeImage()">Увеличить рисунок</button>
+    <button onclick="resetImage()">Исходные размеры</button>
+  </div>
+
+
+  <img id="myImage" src="фотка.jpg" alt="Пример изображения" width="500">
+
+  <script>
+    const originalWidth = 500;
+    const originalHeight = 375; 
+    let currentScale = 1; 
+
+    function shrinkImage() {
+      currentScale = currentScale / 2; 
+      updateImageSize();
+    }
+
+    function enlargeImage() {
+      currentScale = currentScale * 2; 
+      updateImageSize();
+    }
+
+    function resetImage() {
+      currentScale = 1; 
+      updateImageSize();
+    }
+
+    function updateImageSize() {
+      const img = document.getElementById('myImage');
+      img.width = originalWidth * currentScale;
+      img.height = originalHeight * currentScale;
+    }
+  </script>
+</body>
+</html>

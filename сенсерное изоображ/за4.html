@@ -1,0 +1,48 @@
+<html>
+<head>
+  <style>
+    .float-frame {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      border: 2px solid #333;
+      background: white;
+      z-index: 1000;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Информация</h1>
+  <button onclick="showObjectProperties()">Показать фрейм</button>
+
+  <script>
+
+    const myObject = {
+      Имя: "Алексей",
+      Возраст: 30,
+      Город: "Москва",
+      Профессия: "программист"
+    };
+
+    function showObjectProperties() {
+      const frame = document.createElement('div');
+      frame.className = 'float-frame';
+      frame.id = 'infoFrame';
+
+
+      let content = '<h3>Свойства объекта:</h3><ul>';
+      for (let key in myObject) {
+        if (myObject.hasOwnProperty(key)) {
+          content += `<li><strong>${key}:</strong> ${myObject[key]}</li>`;
+        }
+      }
+      content += '</ul>';
+      frame.innerHTML = content;
+      document.body.appendChild(frame);
+    }
+  </script>
+</body>
+</html>

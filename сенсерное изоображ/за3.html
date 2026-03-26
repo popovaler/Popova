@@ -1,0 +1,30 @@
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Двухкадровая анимация</h1>
+  <img id="animation-image" src="фотка.jpg" alt="Кадр 1">
+  <script>
+    const images = [
+      'фотка.jpg',
+      'фотка1.jpg'
+    ];
+
+    let currentImageIndex = 0; 
+    const animationSpeed = 1000; 
+    function changeImage() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      document.getElementById('animation-image').src = images[currentImageIndex];
+    }
+
+    setInterval(changeImage, animationSpeed);
+  </script>
+</body>
+</html>
