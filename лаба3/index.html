@@ -1,0 +1,159 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div class="line1">
+        <h1>«Эспрессо Макиято» by Tommy Cash</h1>
+    </div>
+
+    <div class="line2">
+        <img src="pictures/kofe.png" width="50" height="50">
+        <nav>
+            <a href="#about">О нас</a>
+            <a href="#menu">Меню</a>
+            <a href="#booking">Бронирование</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Найти напиток...">
+            <img src="pictures/lupa.png" alt="Лупа" width="20" height="20">
+            <button>Найти</button>
+        </div>
+    </div>
+</header>
+
+
+
+    <main class="content">
+        <section class="hero">
+            <div class="centered-content">
+                <h1>Свежеобжаренный кофе с любовью</h1>
+                <p>Только отборные зёрна из Эфиопии, Колумбии и Бразилии</p>
+                <a href="#menu" class="btn">Посмотреть меню</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="centered-content">
+                <h2>О нашей кофейне</h2>
+                <p>"Эспрессо Макиято" by Tommy Cash работает с 2025 года. Мы сами обжариваем зёрна и следим за каждым этапом приготовления.</p>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Свежая обжарка</h3>
+                        <p>Зёрна обжариваются каждую неделю</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Экологичная упаковка</h3>
+                        <p>Используем биоразлагаемые материалы</p>
+                    </div>
+            <div class="feature">
+                <h3>Бесплатные десерты</h3>
+                <p>При заказе от 500 руб.</p>
+            </div>
+        </div>
+            </div>
+        </section>
+
+        <section id="menu" class="menu">
+            <div class="centered-content">
+                <h2>Наше меню</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <h3>Эспрессо Макиято</h3>
+                        <p>Фирменный эстонский эспрессо</p>
+                        <img src="pictures/ex.jpg" width="100" height="100">
+                        <span class="price">1000 руб.</span>
+                    </div>
+            <div class="menu-item">
+                <h3>Капучино</h3>
+                <p>Нежный капучино с молочной пенкой</p>
+                <img src="pictures/kapa.jpg" width="100" height="100">
+                <span class="price">200 руб.</span>
+            </div>
+            <div class="menu-item">
+                <h3>Латте</h3>
+                <p>Мягкий латте с карамельным сиропом</p>
+                <img src="pictures/latte.jpg" width="100" height="100">
+                <span class="price">220 руб.</span>
+            </div>
+            <div class="menu-item">
+                <h3>Американо</h3>
+                <p>Крепкий американо с цитрусовыми нотами</p>
+                <img src="pictures/am.jpg" width="100" height="100">
+                <span class="price">180 руб.</span>
+            </div>
+        </div>
+            </div>
+        </section>
+
+        <section id="booking" class="booking">
+            <div class="centered-content">
+                <h2>Бронирование столика</h2>
+                <form class="booking-form">
+                    <div class="form-group">
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" required>
+                    </div>
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="guests">Количество гостей:</label>
+                <select id="guests">
+                    <option value="1">1 человек</option>
+                    <option value="2">2 человека</option>
+                    <option value="3">3 человека</option>
+                    <option value="4">4 человека</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Дата:</label>
+                <input type="date" id="date" required>
+            </div>
+            <button type="submit" class="btn">Забронировать</button>
+        </form>
+            </div>
+        </section>
+    </main>
+
+   <footer id="contacts" class="footer">
+    <div class="contact-info">
+        <h3>Контакты</h3>
+        <div class="contact-block">
+            <h4>Адрес:</h4>
+            <p>г. Москва, ул. Кофейная, 15</p>
+        </div>
+        <div class="contact-block">
+            <h4>Телефон:</h4>
+            <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+        </div>
+        <div class="contact-block">
+            <h4>Email:</h4>
+            <p><a href="mailto:coffee@cash.ru">coffee@cash.ru</a></p>
+        </div>
+        <div class="contact-block">
+            <h4>Режим работы:</h4>
+            <p>Пн–Пт: 8:00–22:00<br>Сб–Вс: 9:00–23:00</p>
+        </div>
+    </div>
+
+    <div class="social-media">
+        <h3>Мы в соцсетях</h3>
+        <ul>
+            <li><a href="#">ВКонтакте</a></li>
+            <li><a href="#">Telegram</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2026 Кофейня «Эспрессо Макиято» by Tommy Cash. Все права защищены</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
